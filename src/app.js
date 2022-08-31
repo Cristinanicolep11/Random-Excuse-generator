@@ -11,20 +11,21 @@ window.onload = function() {
   let what = ["my homework", "the keys", "the car"];
   let when = [
     "before the class",
-    "right on time",
-    "when I finished",
+    "right in time",
+    "when i finished",
     "during my lunch",
-    "while I was praying"
+    "while i was praying"
   ];
 
   const getRandomNumber = max => Math.floor(Math.random() * max);
 
   const getRandomExcuse = () =>
-    `${who[getRandomNumber(who.length)]}${
+    `${who[getRandomNumber(who.length)]} ${
       action[getRandomNumber(action.length)]
     } ${what[getRandomNumber(what.length)]} ${
       when[getRandomNumber(when.length)]
     }`;
+
   document.getElementById("random.excuse").innerText = getRandomExcuse();
 
   console.log("Excuse");
